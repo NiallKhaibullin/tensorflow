@@ -26,14 +26,9 @@ Pod::Spec.new do |s|
   s.pod_target_xcconfig = {
     'HEADER_SEARCH_PATHS' =>
       '"${PODS_TARGET_SRCROOT}" ' +
-      '"${PODS_TARGET_SRCROOT}/' + objc_dir  + 'apis"',
-    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386'
+      '"${PODS_TARGET_SRCROOT}/' + objc_dir  + 'apis"'
   }
-
-  s.user_target_xcconfig = {
-    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386'
-  }
-
+  
   s.default_subspec = 'Core'
 
   s.subspec 'Core' do |core|
