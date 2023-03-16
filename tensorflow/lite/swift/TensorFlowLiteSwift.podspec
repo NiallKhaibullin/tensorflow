@@ -23,14 +23,6 @@ Pod::Spec.new do |s|
   tfl_dir = 'tensorflow/lite/'
   swift_dir = tfl_dir + 'swift/'
 
-  s.pod_target_xcconfig = {
-    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386'
-  }
-
-  s.user_target_xcconfig = {
-    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386'
-  }
-
   s.default_subspec = 'Core'
 
   s.subspec 'Core' do |core|
